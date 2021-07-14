@@ -5,10 +5,10 @@ Simple script to use razer viper mini in linux
 '''
 
 import sys
-from tkinter import Tk
+from gui import Window
 
 try:
-    from openrazer.client import DeviceManager, __version
+    from openrazer.client import DeviceManager, __version__
     from openrazer.client.fx import SingleLed
 
 except ImportError:
@@ -37,4 +37,5 @@ if __name__=='__main__':
 
     led_manager = SingleLed(mouse.serial, mouse.capabilities)
 
-
+    window = Window(mouse, led_manager)
+    window.run()
