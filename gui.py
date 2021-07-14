@@ -80,6 +80,7 @@ class Window(tk.Tk):
         super().__init__()
 
         self.title('Razer Viper Mini')
+        self.iconphoto(False, tk.PhotoImage(file='vipermini.png'))
 
         self.mouse = mouse
         self.led = led
